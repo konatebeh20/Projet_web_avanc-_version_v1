@@ -1,6 +1,6 @@
 import requests 
 
-endpoint = "http://localhost:8000/api/product/"
+endpoint = "http://localhost:8000/api/product/1/"
 
 data = {
     'name': "anananas",
@@ -9,7 +9,7 @@ data = {
     'email': "donald@gmail.com",
 }
 
-response = requests.post(endpoint, json=data)   
+response = requests.put(endpoint, json=data)   
 
 print(response.json())
 

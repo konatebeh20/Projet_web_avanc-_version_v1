@@ -1,0 +1,11 @@
+1===> c'est une api 
+   + API: application programming interface 
+2===> c'est quoi une api  REST: representational state transfer 
+3===> c'est un point de terminaison: url: endpoint https:/donald.com/api/v1/login/
+4===> c'est quoi le format json: javascript object notation 
+5===> c'est quoi la validation d'une api 
+6===> c'est quoi le status code d'une api 100 a 500 404
+7===> c'est quoi la serialisation 
+8===> c'est quoi la deserialisation 
+9===> c'est c'est quoi une api web 
+10 ===> comment developper les api

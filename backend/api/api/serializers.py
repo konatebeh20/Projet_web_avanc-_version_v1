@@ -9,7 +9,7 @@ class ProductSerializer1(serializers.ModelSerializer):
     link = serializers.HyperlinkedIdentityField(view_name='api:product_api_view_detail', lookup_field='pk')
     class Meta:
         model = Product
-        fields = ['id', 'name', 'email', 'price_in_euros', 'description_in_euros', 'link']
+        fields = "__all__"
         #excludes = ['created_at', 'updated_at']
     
     

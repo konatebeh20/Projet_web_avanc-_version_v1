@@ -7,7 +7,7 @@ from rest_framework.decorators import action
 from api.api.serializers import ProductSerializer1
 
 
-class ProductViewSet(ModelViewSet):
+class ProductViewSet(ReadOnlyModelViewSet):
     serializer_class = ProductSerializer1
     queryset = Product.objects.all()
     # route pour les produict avec un prix superieur a 500 

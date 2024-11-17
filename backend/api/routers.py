@@ -2,6 +2,7 @@ from django.urls import path
 from rest_framework.routers import DefaultRouter, SimpleRouter
 
 from api.api.viewset import ProductViewSet
+from api.api.mixins import CombineApiViewSet
 
 """
 defaut router est utilisé pour les opérations CRUD

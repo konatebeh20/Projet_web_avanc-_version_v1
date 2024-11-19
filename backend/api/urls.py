@@ -10,10 +10,12 @@ from api.api.mixins import ( ProductListApiView,
                             CombineApiViewSet
                             )
 from .views import home
+from rest_framework.authtoken.views import obtain_auth_token
 
 app_name = 'api'
 
 urlpatterns = [
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
     path('', home, name='home'),
     path('product/', product_api_view, name='product_api_view'),
     path('product/<int:pk>/', product_api_view, name='product_api_view_detail'),

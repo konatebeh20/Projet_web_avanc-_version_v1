@@ -7,6 +7,9 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 
+# Vue pour la racine (page d'accueil)
+def home(request):
+    return HttpResponse("Bienvenue sur la page d'accueil de mon projet Django!")
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -22,13 +25,22 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-   path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
-   path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-   path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-
-]
-
-urlpatterns+= [
+    path('', home, name='home'),  # La racine mène à la fonction 'home'
+    path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
 ]
+
+# urlpatterns = [
+#    path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+#    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+#    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+
+# ]
+
+# urlpatterns+= [
+#     path('admin/', admin.site.urls),
+#     path('api/', include('api.urls')),
+# ]

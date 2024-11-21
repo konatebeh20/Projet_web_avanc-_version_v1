@@ -40,7 +40,7 @@ class ProductSerializer1(serializers.ModelSerializer):
    
 
     def validate_name(self, value): # validate_<field_name>  clean_<field_name>
-        if value in ['donald', 'trump', 'donald trump']:
+        if value in ['konate', 'beh', 'konate beh']:
             raise serializers.ValidationError('You are not allowed to use this name')
         return value    
         

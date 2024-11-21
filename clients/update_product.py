@@ -6,7 +6,7 @@ data = {
     'name': "anananas",
     'price': 1000,
     'description': "fruit",
-    'email': "konatebeh20@gmail.com",
+    'email': "konate@gmail.com",
 }
 
 response = requests.put(endpoint, json=data)   

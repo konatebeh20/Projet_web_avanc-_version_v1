@@ -1,11 +1,70 @@
 1===> c'est une api 
    + API: application programming interface 
+Une API est un ensemble de règles et d’outils permettant à différentes applications de communiquer entre elles. Elle agit comme un pont entre deux logiciels ou systèmes.
+
 2===> c'est quoi une api  REST: representational state transfer 
-3===> c'est un point de terminaison: url: endpoint https:/donald.com/api/v1/login/
-4===> c'est quoi le format json: javascript object notation 
-5===> c'est quoi la validation d'une api 
+C’est un style architectural qui vas nous servir de pouvoir concevoir des API web. Notons que Les API RESTful utilisent des URL pour identifier des ressources et des méthodes HTTP (GET, POST, PUT, DELETE) pour interagir avec elles. Outre, elles sont conçues pour être simples, évolutives et indépendantes de la plateforme.
+
+3===> c'est quoi un point de terminaison: url: endpoint
+C’est une URL qui représente une ressource ou une action spécifique dans une API. Par exemple : https:/master1.com/api/v1/login/
+Cet endpoint permettrait, par exemple, de gérer les connexions des utilisateurs.
+
+4===> c'est quoi le format json: javascript object notation
+C’est un format de données léger et lisible par les humains, souvent utilisé pour échanger des informations entre un client et un serveur dans une API.
+Exemple :
+{
+  "nom": "Konate",
+  "age": 25,
+  "ville": "Abidjan"
+}
+{
+  "nom": "Mariama",
+  "age": 25,
+  "ville": "Abidjan"
+}
+{
+  "nom": "Naminnin",
+  "age": 25,
+  "ville": "Abidjan"
+}
+{
+  "nom": "Coulibaly",
+  "age": 25,
+  "ville": "Abidjan"
+}
+
+5===> c'est quoi la validation d'une api
+Ici, notos que la validation d'une API, consiste à vérifier que les données envoyées au serveur ou reçues respectent un format et des contraintes spécifiques. Par exemple, s’assurer que :
+   - Un champ email est une adresse email valide.
+   - Un champ requis n’est pas vide.
+   - Les types de données (texte, entier, etc.) sont corrects.
+
 6===> c'est quoi le status code d'une api 100 a 500 404
-7===> c'est quoi la serialisation 
+Les status codes HTTP sont des réponses standard envoyées par le serveur pour indiquer le résultat d’une requête. Par Exemples, nous avons :
+   - 200 OK : La requête a réussi.
+   - 201 Created : Une nouvelle ressource a été créée.
+   - 400 Bad Request : La requête est invalide.
+   - 404 Not Found : La ressource demandée est introuvable.
+   - 500 Internal Server Error : Une erreur s’est produite côté serveur.
+
+7===> c'est quoi la serialisation
+Sérialisation : C’est le processus de conversion d’un objet ou d’une donnée en un format qui peut être facilement transmis (comme JSON ou XML). Par exemple, convertir un objet Python en JSON.
+
 8===> c'est quoi la deserialisation 
+Désérialisation : C’est l’inverse de la sérialisation, où un format transmis (JSON, XML) est converti en un objet ou une donnée manipulable dans un langage comme Python.
+
 9===> c'est c'est quoi une api web 
+Une API web est une interface qui permet à un client (comme une application web ou mobile) d’interagir avec un serveur à travers Internet. Les API web suivent généralement les principes REST et utilisent des protocoles comme HTTP pour échanger des données.
+
 10 ===> comment developper les api
+Pour developper les API, nous devons suivre les étapes :
+   1. Choisir un framework : Par exemple, Flask ou Django pour Python. Ou encore Axios pour ReactJS
+   2. Définir les ressources : Identifier les données ou services que l'API va gérer.
+   3. Créer les endpoints : Par exemple, /users, /products.
+   4. Utiliser des méthodes HTTP :
+      * GET pour lire,
+      * POST pour créer,
+      * PUT pour mettre à jour,
+      * DELETE pour supprimer.
+   5. Implémenter la validation des données : Pour garantir que les entrées sont correctes.
+   6. Tester l'API : Utiliser des outils comme Postman pour s'assurer qu'elle fonctionne correctement.
